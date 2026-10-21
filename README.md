@@ -1,0 +1,2 @@
+# gitmore
+
