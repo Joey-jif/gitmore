@@ -1,32 +1,18 @@
-#ifndef MOVIE_H
-#define MOVIE_H
+#include "Movie.h"
 
-#include <string>
+Movie::Movie(int id, std::string title, std::string genre, int releaseYear)
+    : id(id), title(title), genre(genre), releaseYear(releaseYear), watchStatus(false), rating(0) {}
 
-class Movie {
-private:
-    int id;
-    std::string title;
-    std::string genre;
-    int releaseYear;
-    bool watchStatus; // false = want to watch, true = watched
-    int rating;       // 1 to 5 scale
+int Movie::getId() const { return id; }
+std::string Movie::getTitle() const { return title; }
+std::string Movie::getGenre() const { return genre; }
+int Movie::getReleaseYear() const { return releaseYear; }
+bool Movie::getWatchStatus() const { return watchStatus; }
+int Movie::getRating() const { return rating; }
 
-public:
-
-    Movie(int id, std::string title, std::string genre, int releaseYear);
-
-    // Getters
-    int getId() const;
-    std::string getTitle() const;
-    std::string getGenre() const;
-    int getReleaseYear() const;
-    bool getWatchStatus() const;
-    int getRating() const;
-
-    // Setters / Modifiers
-    void setWatchStatus(bool status);
-    void setRating(int r);
-};
-
-#endif
+void Movie::setWatchStatus(bool status) { watchStatus = status; }
+void Movie::setRating(int r) { 
+    if (r >= 1 && r <= 5) {
+        rating = r; 
+    }
+}
