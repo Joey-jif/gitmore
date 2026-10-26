@@ -13,6 +13,7 @@ private:
     int rating;       // 1 to 5 scale
 
 public:
+
     Movie(int id, std::string title, std::string genre, int releaseYear);
 
     // Getters
