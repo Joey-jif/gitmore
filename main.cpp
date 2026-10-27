@@ -4,11 +4,12 @@
 int main() {
     // Constructing the manager object
     MovieManager manager;
-
+    
     // Using its functions to prove it works
     std::cout << "--- Adding Initial Movies ---" << std::endl;
     manager.addMovie("Inception", "Sci-Fi", 2010);
     manager.addMovie("The Matrix", "Action", 1999);
+    manager.addMovie("The Martian", "Sci-Fi", 2015);
 
     std::cout << "\n--- Displaying Movie List ---" << std::endl;
     manager.displayAll();
