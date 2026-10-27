@@ -15,6 +15,7 @@ int main() {
 
     std::cout << "\n--- Testing Edit and Rate ---" << std::endl;
     manager.editMovie(1, true); // Mark Inception as watched
+    manager.editMovie(2,false); //mark the matrix as not watched
     manager.rateMovie(1, 5);    // Give Inception a 5-star rating
 
     std::cout << "\n--- Final Movie List ---" << std::endl;
